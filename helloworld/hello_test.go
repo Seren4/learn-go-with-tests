@@ -26,6 +26,11 @@ func TestHello(t *testing.T) {
 		want := "Bonjour, Elodie"
 		assertCorrectMessage(t, got, want)
 	})
+	t.Run("in Italian", func(t *testing.T) {
+		got := Hello("Elodie", "Italian")
+		want := "Buongiorno, Elodie"
+		assertCorrectMessage(t, got, want)
+	})
 
 }
 func assertCorrectMessage(t testing.TB, got, want string) {
